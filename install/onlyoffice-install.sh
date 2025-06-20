@@ -58,9 +58,6 @@ fi
 rm -f "$TMP_KEY_CONTENT"
 
 msg_info "Configuring ONLYOFFICE Repository"
-chmod 644 /tmp/onlyoffice.gpg
-chown root:root /tmp/onlyoffice.gpg
-mv /tmp/onlyoffice.gpg /usr/share/keyrings/onlyoffice.gpg
 echo "deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main" >/etc/apt/sources.list.d/onlyoffice.list
 $STD apt-get update
 msg_ok "Repository Added"
